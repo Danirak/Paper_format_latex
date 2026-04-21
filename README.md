@@ -1,6 +1,11 @@
 # Plantilla LaTeX para Informes de Laboratorio Académicos
 
 Plantilla profesional en LaTeX para informes de laboratorio universitarios con formato tipo paper científico. Diseñada para trabajos académicos en español con estilo sobrio y clásico.
+<img width="488" height="631" alt="image" src="https://github.com/user-attachments/assets/fd373039-8ad5-4437-bc07-328107120319" />
+<img width="487" height="629" alt="image" src="https://github.com/user-attachments/assets/0892940b-9e5a-407a-a4bb-dc35af4d84b5" />
+<img width="489" height="617" alt="image" src="https://github.com/user-attachments/assets/10bd007b-cfff-4a8b-b94d-5c7fafcbd0e8" />
+<img width="488" height="633" alt="image" src="https://github.com/user-attachments/assets/6856d713-4cc7-45e8-b543-9a2211370ebf" />
+<img width="487" height="635" alt="image" src="https://github.com/user-attachments/assets/482fb333-df4e-4f32-b655-29effa94ddb7" />
 
 ## 📋 Características
 
