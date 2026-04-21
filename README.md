@@ -14,7 +14,22 @@ Plantilla profesional en LaTeX para informes de laboratorio universitarios con f
 - **Captions centrados en cursiva** con punto después del número
 - **Compilación rápida** mediante scripts incluidos
 
-## 📁 Estructura del Proyecto
+## � Vista Previa
+
+<table>
+  <tr>
+    <td><img src="screenshots/page1.png" alt="Página 1" width="400"/></td>
+    <td><img src="screenshots/page2.png" alt="Página 2" width="400"/></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/page3.png" alt="Página 3" width="400"/></td>
+    <td><img src="screenshots/page4.png" alt="Página 4" width="400"/></td>
+  </tr>
+</table>
+
+*Ejemplo de informe generado: "Determinación experimental de la aceleración de gravedad mediante caída libre"*
+
+## �📁 Estructura del Proyecto
 
 ```
 Paper_format_latex/
@@ -22,10 +37,11 @@ Paper_format_latex/
 ├── compile.ps1                 # Script de compilación PowerShell
 ├── compilar.bat               # Script de compilación Batch
 ├── docs/
-│   └── graficos/              # Directorio para imágenes
+│   └── graficos/              # Directorio para imágenes del documento
 │       ├── Grafico_1.png
 │       ├── Grafico_2.png
 │       └── Grafico_3.png
+├── screenshots/               # Capturas de pantalla para README
 └── README.md                  # Este archivo
 ```
 
@@ -218,6 +234,76 @@ LaTeX balancea las columnas automáticamente con `multicol`. Si es necesario for
 ### PDFs no se actualizan en el visor
 
 Cierra el PDF antes de compilar, o usa un visor que soporte recarga automática (SumatraPDF en Windows).
+
+## 📷 Generar Capturas de Pantalla para el README
+
+Si deseas actualizar las capturas de previsualización en el README:
+
+### Método 1: Exportar desde el PDF
+
+**Windows (Adobe Reader / SumatraPDF):**
+1. Abre `informe_laboratorio.pdf`
+2. Usa la herramienta de captura de Windows (`Win + Shift + S`)
+3. Captura cada página a pantalla completa
+4. Guarda las imágenes en `screenshots/` como `page1.png`, `page2.png`, etc.
+
+**Convertir PDF a imágenes (alternativa con ImageMagick):**
+```powershell
+# Instalar ImageMagick primero
+magick convert -density 300 informe_laboratorio.pdf -quality 90 screenshots/page.png
+```
+
+### Método 2: Usar herramientas online
+- [PDF to PNG](https://www.ilovepdf.com/pdf_to_jpg) - Convierte cada página a imagen
+- Descarga las imágenes y colócalas en la carpeta `screenshots/`
+
+### Opciones de visualización en README
+
+**Grid 2x2 (actual):**
+```html
+<table>
+  <tr>
+    <td><img src="screenshots/page1.png" width="400"/></td>
+    <td><img src="screenshots/page2.png" width="400"/></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/page3.png" width="400"/></td>
+    <td><img src="screenshots/page4.png" width="400"/></td>
+  </tr>
+</table>
+```
+
+**Grid 3x2 (horizontal):**
+```html
+<table>
+  <tr>
+    <td><img src="screenshots/page1.png" width="300"/></td>
+    <td><img src="screenshots/page2.png" width="300"/></td>
+    <td><img src="screenshots/page3.png" width="300"/></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/page4.png" width="300"/></td>
+    <td><img src="screenshots/page5.png" width="300"/></td>
+    <td></td>
+  </tr>
+</table>
+```
+
+**Simple (una columna):**
+```markdown
+![Página 1](screenshots/page1.png)
+![Página 2](screenshots/page2.png)
+```
+
+**Horizontal inline:**
+```markdown
+<p align="center">
+  <img src="screenshots/page1.png" width="24%" />
+  <img src="screenshots/page2.png" width="24%" />
+  <img src="screenshots/page3.png" width="24%" />
+  <img src="screenshots/page4.png" width="24%" />
+</p>
+```
 
 ## 🤝 Contribuciones
 
