@@ -2,7 +2,7 @@
 
 Plantilla profesional en LaTeX para informes de laboratorio universitarios con formato tipo paper científico. Diseñada para trabajos académicos en español con estilo sobrio y clásico.
 
-## 📋 Características
+## Características
 
 - **Formato tipo paper académico** con dos columnas
 - **Tipografía Times New Roman** (aproximación con newtxtext/newtxmath para pdfLaTeX)
@@ -14,7 +14,7 @@ Plantilla profesional en LaTeX para informes de laboratorio universitarios con f
 - **Captions centrados en cursiva** con punto después del número
 - **Compilación rápida** mediante scripts incluidos
 
-## � Vista Previa
+## Vista Previa
 
 <table>
   <tr>
@@ -33,23 +33,7 @@ Plantilla profesional en LaTeX para informes de laboratorio universitarios con f
 
 *Ejemplo de informe generado: "Determinación experimental de la aceleración de gravedad mediante caída libre"*
 
-## �📁 Estructura del Proyecto
-
-```
-Paper_format_latex/
-├── informe_laboratorio.tex    # Documento principal
-├── compile.ps1                 # Script de compilación PowerShell
-├── compilar.bat               # Script de compilación Batch
-├── docs/
-│   └── graficos/              # Directorio para imágenes del documento
-│       ├── Grafico_1.png
-│       ├── Grafico_2.png
-│       └── Grafico_3.png
-├── screenshots/               # Capturas de pantalla para README
-└── README.md                  # Este archivo
-```
-
-## 🚀 Uso Rápido
+## Uso Rápido
 
 ### Opción 1: Usar como plantilla en GitHub
 
@@ -65,7 +49,7 @@ git clone https://github.com/TU_USUARIO/Paper_format_latex.git
 cd Paper_format_latex
 ```
 
-## 📦 Requisitos
+## Requisitos
 
 - **LaTeX Distribution**: MiKTeX, TeX Live, o MacTeX
 - **Compilador**: pdfLaTeX
@@ -84,7 +68,7 @@ cd Paper_format_latex
   - titlesec
   - enumitem
 
-## ⚙️ Compilación
+## Compilación
 
 ### Windows
 
@@ -109,74 +93,7 @@ pdflatex informe_laboratorio.tex
 pdflatex informe_laboratorio.tex
 ```
 
-## 🎨 Personalización
-
-### Cambiar el título y autores
-
-Edita las líneas 173-186 en `informe_laboratorio.tex`:
-
-```latex
-{\fontsize{14}{16}\selectfont\bfseries 
-Título de tu trabajo}
-
-{\normalsize
-Nombre Autor 1, Nombre Autor 2,\\
-Nombre Autor 3}
-```
-
-### Cambiar encabezado
-
-Edita las líneas 77-78:
-
-```latex
-\fancyhead[L]{\small Tu Curso}
-\fancyhead[R]{\small Tu Experimento}
-```
-
-### Ajustar márgenes
-
-Edita las líneas 66-72:
-
-```latex
-\usepackage[
-    top=2.5cm,
-    bottom=2.5cm,
-    left=1.8cm,
-    right=1.8cm
-]{geometry}
-```
-
-### Agregar imágenes
-
-Coloca tus imágenes en `docs/graficos/` y úsalas así:
-
-```latex
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.45\textwidth]{docs/graficos/tu_imagen.png}
-\caption{Descripción de tu imagen.}
-\label{fig:mi_figura}
-\end{figure}
-```
-
-### Agregar tablas
-
-```latex
-\begin{table}[H]
-\centering
-\small
-\begin{tabular}{ccc}
-\toprule
-Columna 1 & Columna 2 & Columna 3 \\
-\midrule
-Dato 1 & Dato 2 & Dato 3 \\
-\bottomrule
-\end{tabular}
-\caption{Descripción de tu tabla.}
-\end{table}
-```
-
-## 📐 Reglas de Formato
+## Reglas de Formato
 
 La plantilla sigue estas convenciones académicas:
 
@@ -235,80 +152,6 @@ LaTeX balancea las columnas automáticamente con `multicol`. Si es necesario for
 \columnbreak
 ```
 
-### PDFs no se actualizan en el visor
-
-Cierra el PDF antes de compilar, o usa un visor que soporte recarga automática (SumatraPDF en Windows).
-
-## 📷 Generar Capturas de Pantalla para el README
-
-Si deseas actualizar las capturas de previsualización en el README:
-
-### Método 1: Exportar desde el PDF
-
-**Windows (Adobe Reader / SumatraPDF):**
-1. Abre `informe_laboratorio.pdf`
-2. Usa la herramienta de captura de Windows (`Win + Shift + S`)
-3. Captura cada página a pantalla completa
-4. Guarda las imágenes en `screenshots/` como `page1.png`, `page2.png`, etc.
-
-**Convertir PDF a imágenes (alternativa con ImageMagick):**
-```powershell
-# Instalar ImageMagick primero
-magick convert -density 300 informe_laboratorio.pdf -quality 90 screenshots/page.png
-```
-
-### Método 2: Usar herramientas online
-- [PDF to PNG](https://www.ilovepdf.com/pdf_to_jpg) - Convierte cada página a imagen
-- Descarga las imágenes y colócalas en la carpeta `screenshots/`
-
-### Opciones de visualización en README
-
-**Grid 2x2 (actual):**
-```html
-<table>
-  <tr>
-    <td><img src="screenshots/page1.png" width="400"/></td>
-    <td><img src="screenshots/page2.png" width="400"/></td>
-  </tr>
-  <tr>
-    <td><img src="screenshots/page3.png" width="400"/></td>
-    <td><img src="screenshots/page4.png" width="400"/></td>
-  </tr>
-</table>
-```
-
-**Grid 3x2 (horizontal):**
-```html
-<table>
-  <tr>
-    <td><img src="screenshots/page1.png" width="300"/></td>
-    <td><img src="screenshots/page2.png" width="300"/></td>
-    <td><img src="screenshots/page3.png" width="300"/></td>
-  </tr>
-  <tr>
-    <td><img src="screenshots/page4.png" width="300"/></td>
-    <td><img src="screenshots/page5.png" width="300"/></td>
-    <td></td>
-  </tr>
-</table>
-```
-
-**Simple (una columna):**
-```markdown
-![Página 1](screenshots/page1.png)
-![Página 2](screenshots/page2.png)
-```
-
-**Horizontal inline:**
-```markdown
-<p align="center">
-  <img src="screenshots/page1.png" width="24%" />
-  <img src="screenshots/page2.png" width="24%" />
-  <img src="screenshots/page3.png" width="24%" />
-  <img src="screenshots/page4.png" width="24%" />
-</p>
-```
-
 ## 🤝 Contribuciones
 
 Las contribuciones son bienvenidas. Si encuentras algún problema o tienes sugerencias:
@@ -317,17 +160,9 @@ Las contribuciones son bienvenidas. Si encuentras algún problema o tienes suger
 2. Haz un **Fork** del proyecto
 3. Crea una **Pull Request** con tus cambios
 
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
-
 ## ✨ Ejemplo
 
 El archivo `informe_laboratorio.tex` incluye un ejemplo completo de un informe de laboratorio de física sobre determinación de la aceleración de gravedad mediante caída libre, que demuestra todas las características de la plantilla.
-
-## 📧 Contacto
-
-Si tienes preguntas o sugerencias, no dudes en abrir un issue en GitHub.
 
 ---
 
